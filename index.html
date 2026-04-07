@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about volleyball - rules, history, equipment, and famous players. Interactive JavaScript demo included.">
+    <meta name="keywords" content="volleyball, sports, rules, history, equipment, players">
+    <title>Volleyball Hub - Learn About the Sport</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f2f1;
+            color: #004d40;
+            line-height: 1.6;
+        }
+
+        
+        #main-header {
+            background-color: #00695c;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #main-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        #main-header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        
+        .navigation {
+            background-color: #004d40;
+            padding: 10px 0;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .navigation li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        
+        .main-content {
+            display: flex;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+       
+        .article {
+            flex: 2;
+            background-color: #ffffff;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .article h2 {
+            color: #004d40;
+            margin-top: 0;
+        }
+
+        
+        .sidebar {
+            flex: 1;
+            background-color: #b2dfdb;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar h3 {
+            color: #004d40;
+            margin-top: 0;
+        }
+
+        
+        #footer {
+            background-color: #00695c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: #004d40;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #00695c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #004d40;
+        }
+
+        .dynamic-text {
+            font-style: italic;
+            color: #00695c;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1>Volleyball Hub</h1>
+        <p>Your comprehensive guide to the exciting world of volleyball</p>
+    </header>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#facts">Key Facts</a></li>
+        </ul>
+    </nav>
+    <section class="main-content">
+        <article class="article" id="overview">
+            <h2>Overview of Volleyball</h2>
+            <p>Volleyball is a dynamic team sport that combines athleticism, strategy, and teamwork. Played by two teams of six players each, separated by a high net, the objective is to score points by grounding the ball on the opponent's court while preventing them from doing the same.</p>
+            <p>Originating in the United States in 1895, volleyball has evolved into a global phenomenon with millions of participants worldwide. The sport demands agility, strength, coordination, and quick decision-making, making it both challenging and exhilarating.</p>
+            <p>Whether played recreationally in backyards or professionally in international arenas, volleyball offers endless opportunities for competition and camaraderie.</p>
+            <h3>Famous Players</h3>
+            <p>Volleyball has produced many legendary athletes who have shaped the sport's history:</p>
+            <ul>
+                <li><strong>Karch Kiraly</strong> - Three-time Olympic gold medalist, pioneer of beach volleyball</li>
+                <li><strong>Giba (Gilberto Amauri)</strong> - Brazilian superstar with multiple Olympic medals</li>
+                <li><strong>Logan Tom</strong> - American setter known for exceptional skills</li>
+                <li><strong>Kim Yeon-koung</strong> - South Korean player with numerous international achievements</li>
+                <li><strong>Lauren Gibbemeyer</strong> - American middle blocker with Olympic success</li>
+            </ul>
+            <h3 id="demo">Interactive JavaScript Demo</h3>
+            <p id="display-vars"></p>
+            <button id="alert-btn" class="btn">Show Alert</button>
+            <br><br>
+            <label for="user-input">Type something:</label><br>
+            <input type="text" id="user-input" placeholder="Enter text here">
+            <p id="display-input"></p>
+            <button id="change-btn" class="btn">Change Content</button>
+            <p id="dynamic-content" class="dynamic-text">This content will change dynamically</p>
+        </article>
+        <aside class="sidebar" id="facts">
+            <h3>Key Facts</h3>
+            <ul>
+                <li><strong>Players:</strong> 2 teams of 6 players each</li>
+                <li><strong>Court Dimensions:</strong> 18m x 9m</li>
+                <li><strong>Net Height:</strong> 2.43m (men), 2.24m (women)</li>
+                <li><strong>Ball Weight:</strong> 260-280g</li>
+                <li><strong>Olympic Sport:</strong> Since 1964</li>
+                <li><strong>Global Reach:</strong> Played in over 200 countries</li>
+            </ul>
+        </aside>
+    </section>
+   
+    <footer id="footer">
+        <p>&copy; 2023 Volleyball Hub. All rights reserved. | <a href="#overview" style="color: #b2dfdb;">Back to Top</a></p>
+    </footer>
+    <script>
+       
+        let name = "Allysa Gorduiz";
+        let course = "BS in Information Technology";
+        document.getElementById('display-vars').innerHTML = `Name: ${name}, Course: ${course}`;
+
+     
+        document.getElementById('alert-btn').addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+
+       
+        document.getElementById('user-input').addEventListener('input', function() {
+            document.getElementById('display-input').innerHTML = this.value;
+        });
+
+      
+        document.getElementById('change-btn').addEventListener('click', function() {
+            document.getElementById('dynamic-content').innerHTML = 'Content changed!';
+        });
+    </script>
+</body>
+</html>
